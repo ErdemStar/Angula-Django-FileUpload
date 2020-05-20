@@ -1,1 +1,1 @@
-# File_Upload-angular-django-
+# this project is created for studying Django Rest Framework and entegrate with angular

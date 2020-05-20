@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="margin-top: 5%;">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="p-5 bg-white shadow rounded-lg"><img
+                        src="https://res.cloudinary.com/mhmd/image/upload/v1557366994/img_epm3iz.png" alt="" width="200"
+                        class="d-block mx-auto mb-4 rounded-pill">
+
+                    <!-- Default bootstrap file upload-->
+
+                    <h6 class="text-center mb-4 text-muted">
+                        You can use default Bootstrap file upload
+                    </h6>
+
+                    <div class="custom-file overflow-hidden rounded-pill mb-5">
+                        <input id="customFile" type="file" class="custom-file-input rounded-pill" name="profile"
+                            (change)="onChange($event)">
+                        <label for="customFile" class="custom-file-label rounded-pill">{{file_name}}</label>
+                    </div>
+                    <!-- End -->
+                    <button type="submit"
+                        class="btn btn-primary file-upload btn btn-primary btn-block rounded-pill shadow">Send</button>
+
+                </div>
+            </form>
+        </div> <!-- col md 6 -->
+        <div class="col-md-3"></div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <app-upload-details [response]="response"></app-upload-details>
+        </div>
+
+    </div>
+</div>
