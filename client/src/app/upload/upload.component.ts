@@ -12,7 +12,7 @@ export class UploadComponent implements OnInit {
   DJANGO_SERVER = 'http://127.0.0.1:8000'
   form: FormGroup;
   file_name:string = ""
-  response = [];
+  response;
 
   onChange(event) {
     if (event.target.files.length > 0) {
@@ -28,7 +28,7 @@ export class UploadComponent implements OnInit {
     console.log(this.response.length)
     this.uploadService.upload(formData).subscribe(
       (res) => {
-        this.response.push(res);
+        this.response = res;
         console.log(this.response);
       },
       (err) => {  
